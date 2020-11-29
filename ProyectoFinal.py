@@ -212,7 +212,7 @@ def createTheMatrix(counter,x,y):
   scale = glm.scale(i, glm.vec3(1, 1, 1))
 
   model = translate * rotate * scale
-  view = glm.lookAt(glm.vec3(8 + x, 10 + x, 18 + y), glm.vec3(0, 0, 0), glm.vec3(0, 1, 0))
+  view = glm.lookAt(glm.vec3(0 + x, 0 + x, 18 + y), glm.vec3(0, 0, 0), glm.vec3(0, 1, 0))
   projection = glm.perspective(glm.radians(45), 800/600, 0.1, 1000)
 
   return projection * view * model
@@ -222,7 +222,7 @@ glViewport(0, 0, 800, 600)
 glEnable(GL_DEPTH_TEST)
 
 time = 0
-x =0
+x = 0
 y = 0
 running = True
 counter = 0
@@ -292,6 +292,14 @@ while running:
           compileShader(azul_shader, GL_FRAGMENT_SHADER)
           )
         glUseProgram(shader)
+      if event.key == pygame.K_LEFT:
+        x += 1
+      if event.key == pygame.K_RIGHT:
+        x -= 1
+      if event.key == pygame.K_UP:
+        y += 1
+      if event.key == pygame.K_DOWN:
+        y -= 1
 
 
   counter += 1
