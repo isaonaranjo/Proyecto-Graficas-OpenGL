@@ -6,3 +6,6 @@
 * 10 puntos por utilizar normales
 * 20 puntos por implementar una cámara (para que valga puntos, la cámara debe poder moverse o rotar, pero no debe atravesar modelos sólidos)
 * 0 - 20 puntos según la estética del modelo
+
+
+* Todo lo requerido esta implementado
